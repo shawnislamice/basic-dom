@@ -1,0 +1,66 @@
+DOM Means Document Object Model
+
+***DOM defines the events for all HTML elements
+***DOM is the methods to acess all HTML elements
+***DOM has the properties of all HTML elements
+***DOM  is all HTML elements as object
+
+****Find the HTML elements by:
+1. getElementById
+2. getElementByClassName
+3. getElementByTagName
+4. querySelector & query Selector All
+
+Kono ekta tag er element gulo keh  jodi amra access korte chai tahole document.getElemntByTagName() USe Korbo
+Kono ekta specific tag er element gulo keh  jodi amra access korte chai tahole document.getElemntById() USe Korbo
+Kono ekta specific tag particular kichu element gulo keh  jodi amra access korte chai tahole document.getElemntByClassName() ooo USe Korte Pari
+
+***Class er maddome particular kichu element keh access korte pari tarpor for of loop mere amra prottek element keh access korte pari.
+***Id holo unique id diye uniquely amra access korte pari particular element ehh.
+
+****Amra chiale query selector diye access korte pari.
+document.querySelectorAll('.fruits-container li')
+document.querySelectorAll('#fruits-title')
+Jodi ID hoy tahole id symbol class hole class symbol ar kono classs keh jodi particularlt pete Chai Tahole mention kore dite Hobe.
+
+document.querySelector('.fruits-container li')
+<li>​::marker​"Apple"</li>​
+
+Query selector diye first element keh amra access korte parbo.
+
+***Nodelist holo static Oi khane for each loop use kora lage
+
+***HTML collection holo live oi khane for of diye access kora jhay.
+Amra chiale javascript diye css property ghulu apply korte pari. 
+const sections = document.querySelectorAll("section"); //Need the section tag
+for (const section of sections) {
+  section.style.border = "2px solid red";
+  section.style.margin = "5px";
+  section.style.borderRadius = "15px";
+  section.style.padding = "5px";
+  section.style.backgroundColor = "green";
+}
+const placesContainer = document.getElementById("places-container");
+for (let place of places) {
+  
+}
+placesContainer.style.backgroundColor = "lightgray";
+
+let yellowColor=document.getElementById('places-container')
+yellowColor.classList.add('yellow-bg')
+
+placesContainer.childNodes[1]
+<h1 id=​"places-title">​Places I like to visit​</h1>​
+
+placesContainer.childNodes
+****Sokol child node ghula deskha jhay mane ei id er bhitore jah jah ache sob
+****Abar ei ghula array er moto access kroa jhay index wise jodio ei ghula array nah array like object. 
+
+placesContainer.childNodes[3].nextSibling
+placesContainer.childNodes[3].previousSibling
+****Array like object er previous element keh access kora hoy previousSibling diye nect element keh access kora hoy nextSibling diye
+document.createElement('p')
+<p>​</p>​
+****Element create kora jhay createElement attribute use kore
+.appendElement dara element keh add kora jhay
+***kono perticular element er parent node keh dekhar jonno parentNode use hoy.

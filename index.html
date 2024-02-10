@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="some-class">Document Object Model</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Document Object Model</h1>
+      <p class="some-class">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+        quaerat labore deserunt unde ex ut, tenetur, nemo impedit cupiditate sit
+        ea. Optio inventore mollitia eaque vel fugit aliquid reiciendis omnis?
+      </p>
+    </header>
+    <main id="main-content">
+      <section>
+        <h1>Shawon Islam</h1>
+        <ul>
+          <li>Kacchi</li>
+          <li>Polao</li>
+          <li>Kabab</li>
+        </ul>
+      </section>
+      <section class="fruits-container">
+        <h1 id="fruits-title">Fruits I like</h1>
+        <ul class="large-text">
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Grape</li>
+        </ul>
+      </section>
+      <section id="places-container">
+        <h1 id="places-title">Places I like to visit</h1>
+    <ul id="places-list">
+        <li class="important-places">Sundarban</li>
+        <li class="important-places">Katabon</li>
+        <li class="important-places">Salbon Bihar</li>
+    </ul>
+    </section>
+    </main>
+    <!-- Javascript link -->
+    <script src="./js/dom.js"></script>
+    <script>
+      console.log("This is Shawon Islam");
+      const student = {
+        name: "Shawon",
+        age: 23,
+        address: {
+          city: "Jeddah",
+          state: "Uttar Pradesh",
+        },
+      };
+      const liCollection = document.getElementsByTagName("li");
+      console.log(liCollection);
+      for (const li of liCollection) {
+        console.log(li.innerText);
+      }
+      const h1Collection = document.getElementsByTagName("h1");
+      console.log(h1Collection);
+      for (const h1 of h1Collection) {
+        console.log(h1.innerText);
+      }
+      const places=document.getElementsByClassName("important-places")
+      for(const place of places){
+        console.log(place.innerText)
+      }
+      const fruitTitle=document.getElementById('fruits-title')
+      fruitTitle.innerText="Text Changed By JavaScript"
+      console.log(fruitTitle)
+      const someli=document.querySelectorAll('.fruits-container li')
+      for(const li of someli){
+        console.log(li.innerText)
+      }
+    </script>
+    <script src="./js/append.js"></script>
+    <script src="./js/styleinJS.js"></script>
+    <!-- Javascript link -->
+  </body>
+</html>
